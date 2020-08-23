@@ -30,7 +30,7 @@ namespace Mainline
 
         private async void OnLoaded(object sender, RoutedEventArgs e)
         {
-            using (var updateManager = new UpdateManager(@"D:\Code\Mainline\Releases"))
+            using (var updateManager = await UpdateManager.GitHubUpdateManager("https://github.com/IUsername/Mainline"))
             {
                 CurrentVersion.Text = $"Current version: {updateManager.CurrentlyInstalledVersion()}";
                 var releaseEntry = await updateManager.UpdateApp();
