@@ -181,7 +181,7 @@ publish/
 PublishScripts/
 
 # NuGet Packages
-*.nupkg
+*/*.nupkg
 # The packages folder can be ignored because of Package Restore
 **/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
@@ -338,3 +338,7 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+# Keep Squirrel files
+!Releases/
+!Releases/*.*
